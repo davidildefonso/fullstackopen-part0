@@ -1,0 +1,16 @@
+title 0.6: New note
+
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note over browser:
+when user hit the save button after entering a new note the browser sends a 
+ajax POST request with the note and the date as the payload
+end note
+server-->browser: {"message":"note created"}
+note over browser:
+browser display all notes including the new one without refreshing the page 
+end note
+note over server:
+the server responde with a success message meaning the note was added to the server
+end note
+
