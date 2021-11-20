@@ -1,0 +1,17 @@
+title 0.5: Single page app
+
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server-->browser: HTML-code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
+browser->server: https://studies.cs.helsinki.fi/exampleapp/spa.js
+server-->browser: spa.js
+note over browser:
+browser fetch the notes with an ajax GET defined on spa.js 
+end note
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: [{"content":"ojklm","date":"2021-11-20T08:47:55.296Z"}, ...]
+note over browser:
+browser executes a function to display the notes  
+end note
